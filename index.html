@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mrs. Hundertmark's Mysteries of Writing Editing Extravaganza</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f7f7f7;
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    textarea {
+      width: 100%;
+      height: 200px;
+      padding: 1rem;
+      font-size: 16px;
+    }
+    .button {
+      background-color: #4b6584;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 6px;
+    }
+    .output {
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: #fff;
+      border-left: 4px solid #4b6584;
+      white-space: pre-wrap;
+    }
+    .legend {
+      margin-top: 2rem;
+      font-size: 14px;
+      background-color: #f0f0f0;
+      padding: 1rem;
+      border-radius: 6px;
+    }
+    .footer-img {
+      margin-top: 2rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🕵️‍♀️ Mrs. Hundertmark's Mysteries of Writing Editing Extravaganza 🐾</h1>
+    <p>Paste your writing below and click "Analyze" to reveal the mysteries in your writing!</p>
+  </header>
+
+  <textarea id="studentInput" placeholder="Paste your writing here..."></textarea>
+  <br>
+  <button class="button" onclick="analyzeWriting()">Analyze</button>
+
+  <div class="output" id="outputArea">
+    <!-- Coded writing will appear here -->
+  </div>
+
+  <div class="legend">
+    <h3>🔍 Code Legend</h3>
+    <p><strong>S.3</strong> = Magic E Rule</p>
+    <p><strong>G.1</strong> = Subject-Verb Agreement</p>
+    <p><strong>P.2</strong> = Missing Comma</p>
+    <p><strong>PA.4</strong> = Voicing Error</p>
+    <!-- You can expand this list -->
+  </div>
+
+  <div class="footer-img">
+    <img src="detective-finley.png" alt="Detective Finley" width="150">
+    <p>Detective Finley is on the case!</p>
+  </div>
+
+  <script>
+    function analyzeWriting() {
+      const input = document.getElementById("studentInput").value;
+      
+      // Placeholder: replace with actual API call to ChatGPT backend
+      const codedText = mockCode(input);
+      document.getElementById("outputArea").innerText = codedText;
+    }
+
+    // Simulated coding function — replace with real logic or API call
+    function mockCode(text) {
+      return text.replace(/hopeing/g, "hopeing [S.3]")
+                 .replace(/their is/g, "their is [G.1]")
+                 .replace(/skool/g, "skool [PA.1]");
+    }
+  </script>
+
+</body>
+</html>
+
+
